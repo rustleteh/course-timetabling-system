@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="28.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="315.0" minHeight="0.0" prefHeight="220.5" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="34.5" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="52.5" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="topFont" alignment="CENTER" contentDisplay="TOP" prefHeight="45.0" prefWidth="850.0" text="MyTimeTable Dashboard" textAlignment="CENTER" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <Separator prefHeight="0.0" prefWidth="750.0" GridPane.columnSpan="8" GridPane.rowIndex="1" />
+      <Button fx:id="goBackButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Go Back" translateX="337.0" GridPane.rowIndex="5" />
+      <Label fx:id="otherFont" prefHeight="17.0" prefWidth="829.0" text="Withdraw from one of your enrolled courses below:" translateX="30.0" GridPane.rowIndex="2" />
+      <TableView fx:id="enrolmentsTable" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0" prefWidth="770.0" GridPane.rowIndex="3">
+         <columns>
+            <TableColumn fx:id="courseNameColumn" prefWidth="170.5">
+               <graphic>
+                  <Label fx:id="courseName" prefHeight="17.0" prefWidth="181.0" text="Course Name" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="capacityColumn" minWidth="0.0" prefWidth="63.796330261230466">
+               <graphic>
+                  <Label fx:id="capacity" prefHeight="17.0" prefWidth="78.0" text="Capacity" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="yearColumn" minWidth="1.218505859375" prefWidth="56.0">
+               <graphic>
+                  <Label fx:id="year" prefHeight="17.0" prefWidth="78.0" text="Year" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="deliveryModeColumn" prefWidth="113.5">
+               <graphic>
+                  <Label fx:id="deliveryMode" prefHeight="17.0" prefWidth="123.0" text="Delivery Mode" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="dayColumn" prefWidth="118.0">
+               <graphic>
+                  <Label fx:id="dayOfLecture" prefHeight="17.0" prefWidth="122.0" text="Day of Lecture" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="timeColumn" minWidth="0.0" prefWidth="121.0">
+               <graphic>
+                  <Label fx:id="timeOfLecture" prefHeight="17.0" prefWidth="137.0" text="Time of Lecture" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="durationColumn" prefWidth="129.5">
+               <graphic>
+                  <Label fx:id="duration" prefHeight="17.0" prefWidth="162.0" text="Duration (hours)" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="withdrawColumn" prefWidth="86.5">
+               <graphic>
+                  <Label fx:id="withdraw" prefHeight="17.0" prefWidth="84.0" text="Withdraw" />
+               </graphic></TableColumn>
+         </columns>
+      </TableView>
+      <Label fx:id="messagePrinter" alignment="CENTER" prefHeight="17.0" prefWidth="751.0" GridPane.rowIndex="4" />
+   </children>
+</GridPane>

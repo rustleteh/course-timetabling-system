@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="263.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="-Infinity" prefWidth="80.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="-Infinity" prefWidth="137.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="-Infinity" prefWidth="139.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="-Infinity" prefWidth="151.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="28.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="251.0" minHeight="13.0" prefHeight="231.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="63.46917724609375" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="topFont" alignment="CENTER" contentDisplay="TOP" prefHeight="45.0" prefWidth="782.0" text="MyTimeTable Dashboard" textAlignment="CENTER" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <Separator prefHeight="0.0" prefWidth="750.0" GridPane.columnSpan="8" GridPane.rowIndex="1" />
+      <Button fx:id="goBackButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Go Back" translateX="337.0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      <Label fx:id="otherFont" prefHeight="17.0" prefWidth="694.0" text="Your enrolled courses are shown in the list below:" translateX="10.0" GridPane.columnSpan="4" GridPane.rowIndex="2" />
+      <ListView fx:id="nameList" editable="true" prefHeight="234.0" GridPane.rowIndex="4" />
+      <ListView fx:id="yearList" prefHeight="234.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <ListView fx:id="deliveryModeList" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <ListView fx:id="dayList" prefHeight="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <ListView fx:id="timeList" prefHeight="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Label fx:id="courseName" alignment="CENTER" prefHeight="17.0" prefWidth="266.0" text="Course Name" GridPane.rowIndex="3" />
+      <Label fx:id="year" alignment="CENTER" prefHeight="17.0" prefWidth="266.0" text="Year" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label fx:id="deliveryMode" alignment="CENTER" prefHeight="17.0" prefWidth="266.0" text="Delivery Mode" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label fx:id="dayOfLecture" alignment="CENTER" prefHeight="17.0" prefWidth="266.0" text="Day of Lecture" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Label fx:id="timeOfLecture" alignment="CENTER" prefHeight="17.0" prefWidth="266.0" text="Time of Lecture" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+   </children>
+</GridPane>

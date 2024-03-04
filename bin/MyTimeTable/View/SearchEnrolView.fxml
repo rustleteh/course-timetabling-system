@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="28.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="251.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="315.0" minHeight="0.0" prefHeight="214.5" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="134.0" minHeight="5.5" prefHeight="21.5" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="50.5" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="topFont" alignment="CENTER" contentDisplay="TOP" prefHeight="45.0" prefWidth="782.0" text="MyTimeTable Dashboard" textAlignment="CENTER" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <Separator prefHeight="0.0" prefWidth="750.0" GridPane.columnSpan="8" GridPane.rowIndex="1" />
+      <Button fx:id="goBackButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Go Back" translateX="337.0" translateY="-6.0" GridPane.rowIndex="6" />
+      <Label fx:id="otherFont" prefHeight="17.0" prefWidth="372.0" text="Enter a keyword below to search for a course to enrol in: " translateX="30.0" GridPane.rowIndex="2" />
+      <TableView fx:id="resultsTable" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="213.0" prefWidth="770.0" GridPane.rowIndex="4">
+         <columns>
+            <TableColumn fx:id="courseNameColumn" prefWidth="170.5">
+               <graphic>
+                  <Label fx:id="courseName" prefHeight="17.0" prefWidth="205.0" text="Course Name" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="capacityColumn" minWidth="0.0" prefWidth="79.0">
+               <graphic>
+                  <Label fx:id="capacity" prefHeight="17.0" prefWidth="143.0" text="Capacity" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="yearColumn" minWidth="1.218505859375" prefWidth="56.0">
+               <graphic>
+                  <Label fx:id="year" prefHeight="17.0" prefWidth="84.0" text="Year" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="deliveryModeColumn" prefWidth="113.5">
+               <graphic>
+                  <Label fx:id="deliveryMode" prefHeight="17.0" prefWidth="162.0" text="Delivery Mode" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="dayColumn" prefWidth="118.0">
+               <graphic>
+                  <Label fx:id="dayOfLecture" prefHeight="17.0" prefWidth="188.0" text="Day of Lecture" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="timeColumn" minWidth="0.0" prefWidth="121.0">
+               <graphic>
+                  <Label fx:id="timeOfLecture" prefHeight="17.0" prefWidth="222.0" text="Time of Lecture" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="durationColumn" prefWidth="129.5">
+               <graphic>
+                  <Label fx:id="duration" prefHeight="17.0" prefWidth="198.0" text="Duration (hours)" />
+               </graphic></TableColumn>
+            <TableColumn fx:id="enrolColumn" minWidth="0.0" prefWidth="61.5">
+               <graphic>
+                  <Label fx:id="enrol" prefHeight="17.0" prefWidth="139.0" text="Enrol" />
+               </graphic></TableColumn>
+         </columns>
+      </TableView>
+      <TextField fx:id="searchField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="241.0" translateX="30.0" GridPane.rowIndex="3" />
+      <Label fx:id="messagePrinter" alignment="CENTER" prefHeight="18.0" prefWidth="751.0" GridPane.rowIndex="5" />
+   </children>
+</GridPane>
